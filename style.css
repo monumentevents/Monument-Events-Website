@@ -1,0 +1,346 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --line: #dedede;
+  --muted: #666666;
+  --page-width: 1120px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--white);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e9e9e9;
+  color: var(--black);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.7rem 1rem;
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.header-instagram {
+  position: fixed;
+  top: clamp(1rem, 2.2vw, 1.75rem);
+  right: var(--gutter);
+  z-index: 20;
+  color: var(--muted);
+  font-size: clamp(0.72rem, 1vw, 0.86rem);
+  letter-spacing: 0.015em;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 220ms ease;
+}
+
+.header-instagram:hover,
+.header-instagram:focus-visible {
+  color: var(--black);
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(100%, calc(var(--page-width) + (var(--gutter) * 2)));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.site-header {
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(0.35rem, 0.8vw, 0.7rem);
+}
+
+.logo-link {
+  display: block;
+  width: clamp(21rem, 48vw, 36rem);
+  margin-inline: auto;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.intro {
+  max-width: 900px;
+  padding-top: 0;
+  padding-bottom: clamp(7rem, 14vw, 11rem);
+}
+
+.intro h1 {
+  max-width: 17ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 7vw, 6.6rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.intro p {
+  margin: clamp(1.4rem, 3vw, 2.5rem) 0 0;
+  color: var(--muted);
+  font-size: clamp(1.4rem, 2.45vw, 2rem);
+  letter-spacing: 0.005em;
+  line-height: 1.35;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: minmax(3rem, 0.4fr) minmax(0, 2.6fr);
+  gap: clamp(1.5rem, 6vw, 7rem);
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+  border-top: 1px solid var(--line);
+}
+
+.section-number {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+}
+
+.section-content {
+  max-width: 760px;
+}
+
+.section-content h2 {
+  margin: 0 0 clamp(2rem, 4vw, 3.5rem);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3.45vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.028em;
+  line-height: 1.08;
+}
+
+.section-content p,
+.principles li {
+  max-width: 65ch;
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.82;
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+.principles ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principles li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.principles li:last-child {
+  margin-bottom: 0;
+}
+
+.follow-section {
+  padding-block: clamp(6rem, 13vw, 10rem);
+  border-top: 1px solid var(--line);
+}
+
+.follow-section p {
+  margin: 0 0 0.9rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3.1vw, 2.7rem);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.follow-section a {
+  display: inline-block;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  text-decoration: none;
+  transition: color 220ms ease;
+  overflow-wrap: anywhere;
+}
+
+.follow-section a:hover,
+.follow-section a:focus-visible {
+  color: var(--black);
+}
+
+.site-footer {
+  padding-top: 1.5rem;
+  padding-bottom: clamp(2.5rem, 6vw, 5rem);
+  border-top: 1px solid var(--black);
+}
+
+.footer-logo-link {
+  display: block;
+  width: clamp(7rem, 15vw, 10rem);
+}
+
+.footer-logo {
+  width: 100%;
+  height: auto;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+@media (max-width: 680px) {
+  .header-instagram {
+    top: 1rem;
+    right: 1.1rem;
+    max-width: calc(100vw - 2.2rem);
+    font-size: 0.69rem;
+  }
+
+  .site-header {
+    padding-top: 3.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .logo-link {
+    width: min(94vw, 27rem);
+  }
+
+  .intro {
+    padding-top: 0;
+    padding-bottom: 6.5rem;
+  }
+
+  .intro h1 {
+    max-width: 15ch;
+    font-size: clamp(2.4rem, 12.5vw, 4.2rem);
+    line-height: 1;
+  }
+
+  .intro p {
+    max-width: 20ch;
+    margin-top: 1.35rem;
+    font-size: clamp(1.3rem, 6.2vw, 1.65rem);
+  }
+
+  .content-section {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding-block: 4rem;
+  }
+
+  .section-number {
+    margin: 0;
+  }
+
+  .section-content h2 {
+    margin-bottom: 1.65rem;
+    font-size: clamp(1.8rem, 7.4vw, 2.25rem);
+  }
+
+  .section-content p,
+  .principles li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .principles li {
+    margin-bottom: 0.75rem;
+  }
+
+  .follow-section {
+    padding-block: 5rem;
+  }
+
+  .follow-section p {
+    max-width: 16ch;
+    font-size: clamp(1.75rem, 8.4vw, 2.4rem);
+  }
+
+  .site-footer {
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-logo-link {
+    width: 7.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .header-instagram {
+    right: 1rem;
+    font-size: 0.65rem;
+  }
+
+  .logo-link {
+    width: 96vw;
+  }
+
+  .intro h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
