@@ -249,9 +249,11 @@ main,
     padding-bottom: 0.2rem;
   }
 
-  .logo-link {
-    width: min(94vw, 27rem);
-  }
+.logo-link {
+  width: min(94vw, 27rem);
+  position: relative;
+  left: -0.5rem;
+}
 
   .intro {
     padding-top: 0;
