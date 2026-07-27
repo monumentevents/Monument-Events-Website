@@ -253,6 +253,7 @@ main,
   width: min(94vw, 27rem);
   position: relative;
   left: -0.75rem;
+  margin-bottom: 1.25rem;
 }
 
   .intro {
